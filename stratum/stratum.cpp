@@ -116,6 +116,7 @@ YAAMP_ALGO g_algos[] =
 	{"neoscrypt", neoscrypt_hash, 0x10000, 0, 0},
 
 	{"c11", c11_hash, 1, 0, 0},
+	{"dedal", dedal_hash, 0x100, 0, 0},
 	{"x11", x11_hash, 1, 0, 0},
 	{"x12", x12_hash, 1, 0, 0},
 	{"x13", x13_hash, 1, 0, 0},
@@ -123,6 +124,7 @@ YAAMP_ALGO g_algos[] =
 	{"x15", x15_hash, 1, 0, 0},
 	{"x17", x17_hash, 1, 0, 0},
 	{"x22i", x22i_hash, 1, 0, 0},
+	{"x20r", x20r_hash, 0x100, 0, 0},
 	{"x21s", x21s_hash, 0x100, 0, 0},
 
 	{"x11evo", x11evo_hash, 1, 0, 0},
@@ -146,6 +148,7 @@ YAAMP_ALGO g_algos[] =
 	{"bastion", bastion_hash, 1, 0 },
 	{"blake", blake_hash, 1, 0 },
 	{"blakecoin", blakecoin_hash, 1 /*0x100*/, 0, sha256_hash_hex },
+	{"blake2b", blake2b_hash, 1, 0 },
 	{"blake2s", blake2s_hash, 1, 0 },
 	{"vanilla", blakecoin_hash, 1, 0 },
 	{"decred", decred_hash, 1, 0 },
@@ -194,6 +197,7 @@ YAAMP_ALGO g_algos[] =
 	{"aergo", aergo_hash, 1, 0, 0},
 
 	{"sha256t", sha256t_hash, 1, 0, 0}, // sha256 3x
+	{"sha256q", sha256q_hash, 1, 0, 0}, // sha256 4x
 
 	{"sib", sib_hash, 1, 0, 0},
 

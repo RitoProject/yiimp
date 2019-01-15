@@ -6,6 +6,7 @@ function yaamp_get_algos()
 	return array(
 		'sha256',
 		'sha256t',
+		'sha256q',
 		'scrypt',
 		'scryptn',
 		'allium',
@@ -17,7 +18,9 @@ function yaamp_get_algos()
 		'blake',
 		'blakecoin',
 		'blake2s',
+		'blake2b',
 		'decred',
+		'dedal',
 		'deep',
 		'exosis',
 		'hmq1725',
@@ -50,6 +53,7 @@ function yaamp_get_algos()
 		'x16s',
 		'x17',
 		'x22i',
+		'x20r',
 		'x21s',
 		'xevan',
 		'groestl', // dmd-gr -m 256 (deprecated)
@@ -84,10 +88,13 @@ function yaamp_algo_mBTC_factor($algo)
 	switch($algo) {
 	case 'sha256':
 	case 'sha256t':
+	case 'sha256q':
 	case 'blake':
 	case 'blakecoin':
 	case 'blake2s':
+	case 'blake2b':
 	case 'decred':
+	case 'dedal':
 	case 'keccak':
 	case 'keccakc':
 	case 'lbry':
@@ -143,11 +150,13 @@ function getAlgoColors($algo)
 	$a = array(
 		'sha256'	=> '#d0d0a0',
 		'sha256t'	=> '#d0d0f0',
+		'sha256q'	=> '#9696dd',
 		'scrypt'	=> '#c0c0e0',
 		'neoscrypt'	=> '#a0d0f0',
 		'scryptn'	=> '#d0d0d0',
 		'c11'		=> '#a0a0d0',
 		'decred'	=> '#f0f0f0',
+		'dedal'		=> '#g0f0f0',
 		'deep'		=> '#e0ffff',
 		'x11'		=> '#f0f0a0',
 		'x11evo'	=> '#c0f0c0',
@@ -159,6 +168,7 @@ function getAlgoColors($algo)
 		'x16s'		=> '#f0b080',
 		'x17'		=> '#f0b0a0',
 		'x22i'		=> '#f0a090',
+		'x20r'		=> '#c0a090',
 		'x21s'		=> '#f0a090',
 		'xevan'		=> '#f0b0a0',
 		'allium'	=> '#80a0d0',
@@ -168,6 +178,7 @@ function getAlgoColors($algo)
 		'bastion'	=> '#e0b0b0',
 		'blake'		=> '#f0f0f0',
 		'blakecoin'	=> '#f0f0f0',
+		'blake2b'	=> '#f2c81f',
 		'exosis'	=> '#49CCFE',
 		'groestl'	=> '#d0a0a0',
 		'jha'		=> '#a0d0c0',
@@ -225,6 +236,7 @@ function getAlgoPort($algo)
 	$a = array(
 		'sha256'	=> 3333,
 		'sha256t'	=> 3339,
+		'sha256q'	=> 3337,
 		'lbry'		=> 3334,
 		'scrypt'	=> 3433,
 		'timetravel'	=> 3555,
@@ -241,6 +253,7 @@ function getAlgoPort($algo)
 		'x16s'		=> 3663,
 		'x17'		=> 3737,
 		'x22i'		=> 3223,
+		'x20r'		=> 3352,
 		'x21s'		=> 3224,
 		'aergo'		=> 3691,
 		'xevan'		=> 3739,
@@ -275,8 +288,10 @@ function getAlgoPort($algo)
 		'blake'		=> 5733,
 		'blakecoin'	=> 5743,
 		'decred'	=> 3252,
+		'dedal'		=> 3353,
 		'vanilla'	=> 5755,
 		'blake2s'	=> 5766,
+		'blake2b'	=> 5777,
 		'penta'		=> 5833,
 		'rainforest'	=> 7443,
 		'luffa'		=> 5933,
